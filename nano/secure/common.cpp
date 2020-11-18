@@ -25,34 +25,34 @@ nano::nano_networks nano::network_constants::active_network = nano::nano_network
 namespace
 {
 char const * test_private_key_data = "34F0A37AAD20F4A260F0A5B3CB3D7FB50673212263E58A380BC10474BB039CE4";
-char const * test_public_key_data = "B0311EA55708D6A53C75CDBF88300259C6D018522FE3D4D0A242E431F9E8B6D0"; // badem_3e3j5tkog48pnny9dmfzj1r16pg8t1e76dz5tmac6iq689wyjfpiij4txtdo
-char const * beta_public_key_data = "499D3E2FC2DB9FC2D0D4C445AD073C713E5634D7B2BBF24F57A727A1BABF68AB"; // badem_1kex9rqw7pwzrdafbj47on5mrwbycrtfheouyb9ohbs9n8xdyt7d4xso99rb
-char const * live_public_key_data = "97D3FCD7FA2127B0BE06A159E98EC10AF99EF048BB1D3D8396BB6AA4E253D826"; // badem_37ymzmdznab9p4z1facsx89e44qsmur6jgrx9p3sfgucnmj79p38jkrrjmaj
+char const * test_public_key_data = "F955ED05123755F780740274F0AEE04D3CA42B4FE74CA98810461DCCDB2D8BB1"; // ceviz_3e3j5tkog48pnny9dmfzj1r16pg8t1e76dz5tmac6iq689wyjfpiij4txtdo
+char const * beta_public_key_data = "F955ED05123755F780740274F0AEE04D3CA42B4FE74CA98810461DCCDB2D8BB1"; // ceviz_1kex9rqw7pwzrdafbj47on5mrwbycrtfheouyb9ohbs9n8xdyt7d4xso99rb
+char const * live_public_key_data = "F955ED05123755F780740274F0AEE04D3CA42B4FE74CA98810461DCCDB2D8BB1"; // ceviz_3ycoxn4j6ftoyy19a1mny4qg1mbwnionzsteo8631jixsmfku4xjrqskimak
 char const * test_genesis_data = R"%%%({
 	"type": "open",
-	"source": "97D3FCD7FA2127B0BE06A159E98EC10AF99EF048BB1D3D8396BB6AA4E253D826",
-	"representative": "badem_37ymzmdznab9p4z1facsx89e44qsmur6jgrx9p3sfgucnmj79p38jkrrjmaj",
-	"account": "badem_37ymzmdznab9p4z1facsx89e44qsmur6jgrx9p3sfgucnmj79p38jkrrjmaj",
-	"work": "8998a53debd2acfa",
-	"signature": "A0AE55CA153A6C2308137F7F2CCD9DC9AE1590A9D31A826CA8A52290F53D258EA933136C7D7E06E294C2886D74E707B4B29D6A6102E77B349C1FA86937CB8F09"
+	"source": "F955ED05123755F780740274F0AEE04D3CA42B4FE74CA98810461DCCDB2D8BB1",
+	"representative": "ceviz_3ycoxn4j6ftoyy19a1mny4qg1mbwnionzsteo8631jixsmfku4xjrqskimak",
+	"account": "ceviz_3ycoxn4j6ftoyy19a1mny4qg1mbwnionzsteo8631jixsmfku4xjrqskimak",
+	"work": "00b9c16b14b9b713",
+	"signature": "813C4B06B414B08963ECD02D3BE1DC3AF1BBCC373A65D377374D8C310D4E846B7C508B79562DB5D8C0328A4C522D5AE128ABE3069C110E1FF365990F05B3E40A"
 	})%%%";
 
 char const * beta_genesis_data = R"%%%({
 	"type": "open",
-	"source": "499D3E2FC2DB9FC2D0D4C445AD073C713E5634D7B2BBF24F57A727A1BABF68AB",
-	"representative": "badem_1kex9rqw7pwzrdafbj47on5mrwbycrtfheouyb9ohbs9n8xdyt7d4xso99rb",
-	"account": "badem_1kex9rqw7pwzrdafbj47on5mrwbycrtfheouyb9ohbs9n8xdyt7d4xso99rb",
-	"work": "f066e9305cbee8c8",
+	"source": "F955ED05123755F780740274F0AEE04D3CA42B4FE74CA98810461DCCDB2D8BB1",
+	"representative": "ceviz_3ycoxn4j6ftoyy19a1mny4qg1mbwnionzsteo8631jixsmfku4xjrqskimak",
+	"account": "ceviz_3ycoxn4j6ftoyy19a1mny4qg1mbwnionzsteo8631jixsmfku4xjrqskimak",
+	"work": "00b9c16b14b9b713",
 	"signature": "45776E6CE2011A662BF1F59D4C7376FCF1249B31D345F582CC62381BB902C28C20EDE58FF57772D7CD65365FB4C3CD158C4FECE63AB3B0E0B0CC87A8ECC24607"
 	})%%%";
 
 char const * live_genesis_data = R"%%%({
 	"type": "open",
-	"source": "40C8E1D867DA316ED2404C8A69624FFCFF884B0ADBB26B58F7A0C27C0E044A34",
-	"representative": "badem_1i8aw9e8hpjjfub61m6cf7j6zz9zj37iopxkffehha84hi91akjn1n9s51fg",
-	"account": "badem_1i8aw9e8hpjjfub61m6cf7j6zz9zj37iopxkffehha84hi91akjn1n9s51fg",
-	"work": "e6bdfde84acdea33",
-	"signature": "2EA5AD03F2925707F25E1245E821042EEAFE8DEDD5E50A913B8E65DD13945B73654E63BDC8D23AA4B315BE60FE8E75103D00A95B24C6EA916A8A1145296C1903"
+	"source": "F955ED05123755F780740274F0AEE04D3CA42B4FE74CA98810461DCCDB2D8BB1",
+	"representative": "ceviz_3ycoxn4j6ftoyy19a1mny4qg1mbwnionzsteo8631jixsmfku4xjrqskimak",
+	"account": "ceviz_3ycoxn4j6ftoyy19a1mny4qg1mbwnionzsteo8631jixsmfku4xjrqskimak",
+	"work": "00b9c16b14b9b713",
+	"signature": "813C4B06B414B08963ECD02D3BE1DC3AF1BBCC373A65D377374D8C310D4E846B7C508B79562DB5D8C0328A4C522D5AE128ABE3069C110E1FF365990F05B3E40A"
 	})%%%";
 }
 

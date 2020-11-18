@@ -11,9 +11,9 @@ int main (int argc, char ** argv)
 	nano::network_constants::set_active_network (nano::nano_networks::nano_test_network);
 	nano::node_singleton_memory_pool_purge_guard memory_pool_cleanup_guard;
 	QApplication application (argc, argv);
-	QCoreApplication::setOrganizationName ("Badem");
+	QCoreApplication::setOrganizationName ("Ceviz");
 	QCoreApplication::setOrganizationDomain ("badem.io");
-	QCoreApplication::setApplicationName ("Badem Wallet");
+	QCoreApplication::setApplicationName ("Ceviz Wallet");
 	nano_qt::eventloop_processor processor;
 	static uint16_t count (16);
 	nano::system system (24000, count);

@@ -419,7 +419,7 @@ if (NANO_GUI OR RAIBLOCKS_GUI)
 
 	qt5_add_resources(RES resources.qrc)
 
-	add_executable (badem_wallet ${PLATFORM_GUI_TARGET_PROPERTIES}
+	add_executable (nano_wallet ${PLATFORM_GUI_TARGET_PROPERTIES}
 		${PLATFORM_WALLET_SOURCE}
 		nano/nano_wallet/entry.cpp
 		nano/nano_wallet/icon.hpp
@@ -491,14 +491,14 @@ if (NANO_GUI OR RAIBLOCKS_GUI)
 												WriteRegDWORD HKLM 'SYSTEM\\\\CurrentControlSet\\\\Services\\\\EventLog\\\\Badem\\\\Badem' 'TypesSupported' '0x7'
 												WriteRegStr HKLM 'SYSTEM\\\\CurrentControlSet\\\\Services\\\\EventLog\\\\Badem\\\\Badem' 'EventMessageFile' '$INSTDIR\\\\badem_wallet.exe'")
 		set (CPACK_NSIS_EXTRA_UNINSTALL_COMMANDS "DeleteRegKey HKLM 'SYSTEM\\\\CurrentControlSet\\\\Services\\\\EventLog\\\\Badem'")
-		set (CPACK_PACKAGE_INSTALL_DIRECTORY "bademcurrency")
+		set (CPACK_PACKAGE_INSTALL_DIRECTORY "cevizcurrency")
 		set (CPACK_NSIS_MUI_ICON ${CMAKE_SOURCE_DIR}/Badem.ico)
-		set (CPACK_NSIS_DISPLAY_NAME "Badem")
-		set (CPACK_PACKAGE_NAME "badem-node")
-		set (CPACK_NSIS_PACKAGE_NAME "Badem")
+		set (CPACK_NSIS_DISPLAY_NAME "Ceviz")
+		set (CPACK_PACKAGE_NAME "ceviz-node")
+		set (CPACK_NSIS_PACKAGE_NAME "Ceviz")
 		set (CPACK_NSIS_URL_INFO_ABOUT "https://badem.io")
 		set (CPACK_NSIS_CONTACT "info@badem.io")
-		set (CPACK_NSIS_MENU_LINKS "badem_wallet.exe" "Badem Wallet" "https://badem.io" "Badem website")
+		set (CPACK_NSIS_MENU_LINKS "badem_wallet.exe" "Ceviz Wallet" "https://badem.io" "Badem website")
 		set (CPACK_NSIS_ENABLE_UNINSTALL_BEFORE_INSTALL ON)
 		get_target_property (Qt5WindowsPlugin Qt5::QWindowsIntegrationPlugin LOCATION)
 		get_filename_component (Qt5_bin_DIR ${Qt5_DIR}/../../../bin ABSOLUTE)

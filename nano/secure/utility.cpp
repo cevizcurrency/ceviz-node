@@ -13,7 +13,7 @@ boost::filesystem::path nano::working_path (bool legacy)
 		case nano::nano_networks::nano_test_network:
 			if (!legacy)
 			{
-				result /= "BademTest";
+				result /= "CevizTest";
 			}
 			else
 			{
@@ -23,7 +23,7 @@ boost::filesystem::path nano::working_path (bool legacy)
 		case nano::nano_networks::nano_beta_network:
 			if (!legacy)
 			{
-				result /= "BademBeta";
+				result /= "CevizBeta";
 			}
 			else
 			{
@@ -33,7 +33,7 @@ boost::filesystem::path nano::working_path (bool legacy)
 		case nano::nano_networks::nano_live_network:
 			if (!legacy)
 			{
-				result /= "Badem";
+				result /= "Ceviz";
 			}
 			else
 			{

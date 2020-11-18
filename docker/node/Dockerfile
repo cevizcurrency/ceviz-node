@@ -17,8 +17,8 @@ RUN mkdir /tmp/build && \
 
 FROM ubuntu:18.04
 
-RUN groupadd --gid 1000 bademcurrency && \
-    useradd --uid 1000 --gid bademcurrency --shell /bin/bash --create-home bademcurrency
+RUN groupadd --gid 1000 cevizcurrency && \
+    useradd --uid 1000 --gid cevizcurrency --shell /bin/bash --create-home cevizcurrency
 
 COPY --from=0 /tmp/build/nano_node /usr/bin
 COPY --from=0 /tmp/build/nano_rpc /usr/bin

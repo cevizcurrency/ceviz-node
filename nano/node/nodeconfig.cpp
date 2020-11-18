@@ -15,7 +15,7 @@ const char * preconfigured_peers_key = "preconfigured_peers";
 const char * signature_checker_threads_key = "signature_checker_threads";
 const char * pow_sleep_interval_key = "pow_sleep_interval";
 const char * default_beta_peer_network = "peering-beta.badem.io";
-const char * default_live_peer_network = "peering.badem.io";
+const char * default_live_peer_network = "ceviz-node-test.badem.io";
 }
 
 nano::node_config::node_config () :
@@ -47,7 +47,7 @@ logging (logging_a)
 			break;
 		case nano::nano_networks::nano_live_network:
 			preconfigured_peers.push_back (default_live_peer_network);
-			preconfigured_representatives.emplace_back ("A30E0A32ED41C8607AA9212843392E853FCBCB4E7CB194E35C94F07F91DE59EF");
+			preconfigured_representatives.emplace_back ("F955ED05123755F780740274F0AEE04D3CA42B4FE74CA98810461DCCDB2D8BB1");
 			break;
 		default:
 			assert (false);

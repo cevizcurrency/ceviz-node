@@ -1,11 +1,11 @@
 [Unit]
-Description=Badem Daemon live network
+Description=Ceviz Daemon live network
 After=network.target
 
 [Service]
 Type=simple
-User=bademcurrency
-WorkingDirectory=/var/bademcurrency/Badem
+User=cevizcurrency
+WorkingDirectory=/var/cevizcurrency/Ceviz
 ExecStart=/usr/bin/nano_node --daemon
 Restart=on-failure
 

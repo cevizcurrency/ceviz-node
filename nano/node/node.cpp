@@ -390,7 +390,6 @@ startup_time (std::chrono::steady_clock::now ())
 			auto transaction (store.tx_begin_read ());
 			is_initialized = (store.latest_begin (transaction) != store.latest_end ());
 		}
-
 		nano::genesis genesis;
 		if (!is_initialized)
 		{

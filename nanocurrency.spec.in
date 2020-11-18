@@ -1,7 +1,7 @@
-Name:                   bademcurrency
+Name:                   cevizcurrency
 Version:                @VERSION@ 
 Release:                @RELEASE@%{?dist}
-Summary:                Bademcurrency Daemon
+Summary:                Cevizcurrency Daemon
 License:                BSD-2-Clause
 URL:                    https://badem.io/
 Requires(pre):          /usr/sbin/useradd, /usr/bin/getent
@@ -10,9 +10,9 @@ BuildRequires:          make, libstdc++-static, glibc-devel, glibc-headers
 Source:                 nano-%{version}.tar.gz
 
 %description
-This is bademcurrency daemon.  Badem is a digital currency that is
+This is cevizcurrency daemon.  Ceviz is a digital currency that is
 peer-to-peer, decentralized, and trustless. This package includes
-the badem daemon, and a service.
+the ceviz daemon, and a service.
 
 %prep
 if [ ! -x "$(which cmake)" ]; then
@@ -41,7 +41,7 @@ mkdir -p %{buildroot}/usr/bin
 mkdir -p %{buildroot}/etc/systemd/system/
 cp nano_node %{buildroot}/usr/bin/nano_node
 cp nano_rpc %{buildroot}/usr/bin/nano_rpc
-cp etc/systemd/bademcurrency.service %{buildroot}/etc/systemd/system/bademcurrency.service
+cp etc/systemd/cevizcurrency.service %{buildroot}/etc/systemd/system/cevizcurrency.service
 
 %clean
 if [ ! %{buildroot} = "/" ]; then %{__rm} -rf %{buildroot}; fi
@@ -49,16 +49,16 @@ if [ ! %{buildroot} = "/" ]; then %{__rm} -rf %{buildroot}; fi
 %files
 %defattr(755,root,root)
 %{_bindir}/nano_node
-%attr(644,root,root) /etc/systemd/system/bademcurrency.service
+%attr(644,root,root) /etc/systemd/system/cevizcurrency.service
 
 %pre
 PATH="/usr/bin:/usr/sbin:/bin:/sbin:${PATH}"; export PATH
-mkdir -p /var/bademcurrency/Badem
-getent group bademcurrency >/dev/null || groupadd --system bademcurrency || exit 1
-getent passwd bademcurrency >/dev/null || useradd --system --create-home --home-dir /var/bademcurrency --shell /bin/bash --comment "Bademcurrency Daemon user" --gid bademcurrency bademcurrency || exit 1
-chown -R bademcurrency:bademcurrency/var/bademcurrency
-chmod 700 /var/bademcurrency
+mkdir -p /var/cevizcurrency/Ceviz
+getent group cevizcurrency >/dev/null || groupadd --system cevizcurrency || exit 1
+getent passwd cevizcurrency >/dev/null || useradd --system --create-home --home-dir /var/cevizcurrency --shell /bin/bash --comment "Cevizcurrency Daemon user" --gid cevizcurrency cevizcurrency || exit 1
+chown -R cevizcurrency:cevizcurrency/var/cevizcurrency
+chmod 700 /var/cevizcurrency
 
 %postun
 PATH="/usr/bin:/usr/sbin:/bin:/sbin:${PATH}"; export PATH
-userdel bademcurrency>/dev/null 2>/dev/null || :
+userdel cevizcurrency>/dev/null 2>/dev/null || :

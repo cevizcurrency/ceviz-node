@@ -431,10 +431,10 @@ int main (int argc, char * const * argv)
 		}
 		else if (vm.count ("debug_output_last_backtrace_dump"))
 		{
-			if (boost::filesystem::exists ("badem_node_backtrace.dump"))
+			if (boost::filesystem::exists ("ceviz_node_backtrace.dump"))
 			{
 				// There is a backtrace, so output the contents
-				std::ifstream ifs ("badem_node_backtrace.dump");
+				std::ifstream ifs ("ceviz_node_backtrace.dump");
 
 				boost::stacktrace::stacktrace st = boost::stacktrace::stacktrace::from_dump (ifs);
 				std::cout << "Latest crash backtrace:\n"
